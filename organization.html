@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Organization</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+<h2>Organization</h2>
+
+<form method="post">
+  <input name="member" placeholder="Add Team Member">
+  <button>Add</button>
+</form>
+
+<ul>
+{% for m in members %}
+  <li>{{ m }}</li>
+{% endfor %}
+</ul>
+
+<a href="/dashboard">⬅ Back</a>
+</div>
+
+</body>
+</html>

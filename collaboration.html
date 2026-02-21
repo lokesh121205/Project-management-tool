@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Collaboration</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+<h2>Collaboration</h2>
+
+<ul>
+{% for c in chats %}
+  <li>{{ c }}</li>
+{% endfor %}
+</ul>
+
+<a href="/dashboard">⬅ Back</a>
+</div>
+
+</body>
+</html>

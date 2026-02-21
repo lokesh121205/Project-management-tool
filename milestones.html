@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Milestones</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+<h2>Milestones</h2>
+
+<form method="post">
+  <input name="milestone" placeholder="Milestone Name">
+  <button>Add Milestone</button>
+</form>
+
+<ul>
+{% for m in milestones %}
+  <li>{{ m }}</li>
+{% endfor %}
+</ul>
+
+<a href="/dashboard">⬅ Back</a>
+</div>
+
+</body>
+</html>

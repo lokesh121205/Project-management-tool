@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projects</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+<h2>Projects</h2>
+
+<form method="post">
+  <input name="project" placeholder="Project Name">
+  <button>Add Project</button>
+</form>
+
+<ul>
+{% for p in projects %}
+  <li>{{ p }}</li>
+{% endfor %}
+</ul>
+
+<a href="/dashboard">⬅ Back</a>
+</div>
+
+</body>
+</html>

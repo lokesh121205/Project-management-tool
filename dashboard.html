@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Team Member Dashboard</h2>
+
+<div class="dashboard-cards">
+  <div class="card"><h3>Projects</h3><p>{{ d.projects }}</p></div>
+  <div class="card"><h3>Tasks</h3><p>{{ d.tasks }}</p></div>
+  <div class="card"><h3>Milestones</h3><p>{{ d.milestones }}</p></div>
+  <div class="card"><h3>Issues</h3><p>{{ d.issues }}</p></div>
+</div>
+
+<nav>
+  <a href="/organization">Organization</a>
+  <a href="/projects">Projects</a>
+  <a href="/tasks">Tasks</a>
+  <a href="/milestones">Milestones</a>
+  <a href="/time">Time</a>
+  <a href="/collaboration">Collaboration</a>
+  <a href="/issues">Issues</a>
+  <a href="/documents">Documents</a>
+  <a href="/reports">Reports</a>
+  <a href="/notifications">Notifications</a>
+  <a href="/logout">Logout</a>
+</nav>
+
+</div>
+</body>
+</html>

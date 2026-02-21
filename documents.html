@@ -1,0 +1,14 @@
+<h2>Documents</h2>
+
+<form method="post">
+  <input name="doc" placeholder="Document Name" required>
+  <button>Upload</button>
+</form>
+
+<ul>
+{% for d in documents %}
+  <li>{{ d }}</li>
+{% endfor %}
+</ul>
+
+<a href="/dashboard">Back</a>
