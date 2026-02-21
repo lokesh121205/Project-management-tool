@@ -1,0 +1,228 @@
+/* ===============================
+   GLOBAL RESET & THEME
+================================ */
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #1f2937;
+}
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+h1, h2 {
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #111827;
+}
+
+h2 {
+    font-size: 28px;
+    border-left: 6px solid #6366f1;
+    padding-left: 14px;
+}
+
+/* ===============================
+   FORMS
+================================ */
+form {
+    max-width: 500px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 15px;
+    background: #f9fafb;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    background: #ffffff;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.25);
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+button {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #ffffff;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(99,102,241,0.5);
+}
+
+/* ===============================
+   DASHBOARD CARDS
+================================ */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    margin-bottom: 35px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 16px;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.card p {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* COLOR VARIANTS FOR CARDS */
+.card:nth-child(1) { background: linear-gradient(135deg, #3b82f6, #06b6d4); }
+.card:nth-child(2) { background: linear-gradient(135deg, #22c55e, #16a34a); }
+.card:nth-child(3) { background: linear-gradient(135deg, #f59e0b, #f97316); }
+.card:nth-child(4) { background: linear-gradient(135deg, #ef4444, #dc2626); }
+
+/* ===============================
+   LISTS (PROJECTS / TASKS)
+================================ */
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+}
+
+ul li {
+    background: linear-gradient(135deg, #eef2ff, #ffffff);
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    border-left: 6px solid #6366f1;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* ===============================
+   NAVIGATION BAR
+================================ */
+nav {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+nav a {
+    text-decoration: none;
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(99,102,241,0.45);
+}
+
+/* ===============================
+   NOTIFICATIONS
+================================ */
+.notification {
+    background: linear-gradient(135deg, #e0f2fe, #ffffff);
+    border-left: 6px solid #0284c7;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    font-weight: 500;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   FOOTER LINK
+================================ */
+.footer-link {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-link a {
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.footer-link a:hover {
+    color: #111827;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+}
